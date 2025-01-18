@@ -89,9 +89,9 @@ function M.get_slot_range(direction)
   if vim.o.showtabline == 2 or (vim.o.showtabline == 1 and vim.fn.tabpagenr("$") > 1) then
     top = 1
   end
-  if vim.wo.winbar ~= '' then
-    top = top + 1
-  end
+  --if vim.wo.winbar ~= '' then
+  --  top = top + 1
+  --end
 
   local bottom = vim.opt.lines:get()
     - (vim.opt.cmdheight:get() + (vim.opt.laststatus:get() > 0 and 1 or 0) + 1)
